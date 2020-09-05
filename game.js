@@ -1,16 +1,16 @@
 const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
 
-function askName() {
-    rl.question('Please input your name\n', (answer) => {
-        console.log(`Hello ${answer}!`);
-        rl.close();
-    });
-}
+// function askName() {
+//     rl.question('Please input your name\n', (answer) => {
+//         console.log(`Hello ${answer}!`);
+//         rl.close();
+//     });
+// }
 
 // askName();
 
@@ -68,16 +68,16 @@ class Board {
       [[0,2],[1,1],[2,0]]
     ]
 
-    for(let i = 0; i < winningMoves.length; i++) {
-      let x, y = winningMoves[i]
-      let winning = true;
-      for (let  = 0; j < 3; j++) {
-        if (this.grid[i][j] !== mark) {
-          winning = false;
-        }
-      }
-      return winning;
-    }
+    // for(let i = 0; i < winningMoves.length; i++) {
+    //   let x, y = winningMoves[i]
+    //   let winning = true;
+    //   for (let  = 0; j < 3; j++) {
+    //     if (this.grid[i][j] !== mark) {
+    //       winning = false;
+    //     }
+    //   }
+    //   return winning;
+    // }
     
  
 
@@ -85,18 +85,11 @@ class Board {
   }
 }
 
-// const board = new Board()
-// board.mark('X',1,1)
-// board.mark('O',1,1)
-// board.clear()
-// console.log(board)
-
 // Game
 
 class Game {
   constructor() {
     this.board = new Board();
-    this.players = [new Player('O'), new Player('X')];
     this.currentPlayerIndex = 0;
     this.winner = false;
     this.moveCount = 0;
@@ -154,15 +147,6 @@ class Game {
     };
   }
 
-}
-
-// Player
-
-class Player {
-  // mark
-  constructor(mark) {
-    this.mark = mark
-  }
 }
 
 
